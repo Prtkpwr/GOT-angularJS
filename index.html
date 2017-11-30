@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="GOT">
+<body ng-controller="mainController as mainCtrl">
+   
+    
+  <div ng-repeat="data in mainCtrl.allData">
+    {{data.name}}
+      
+
+      
+      
+    
+    </div>
+    <div ng-repeat="item in mainCtrl.allChar">
+    {{item.name}}
+      
+
+      
+      
+    
+    </div>
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+ <script type="text/javascript" src="angular/app.js"></script>
+ <script type="text/javascript" src="angular/route.js"></script>
+ <script type="text/javascript" src="angular/services/service.js"></script>
+ <script type="text/javascript" src="angular/controller/mainController.js"></script>
+</body>
+</html>
