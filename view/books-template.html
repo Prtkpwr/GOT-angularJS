@@ -1,13 +1,15 @@
 
-<div class="col-xs-12 col-md-4 text-center">
-			
-      	  <h3 class="text-center" style="margin-top:40px;">{{ item.name }}</h3>
+
+
+<div class="col-xs-12 col-md-4 col-md-offset-1 text-center books">
+    <img src="images/book.png" style="width: 30px;height: 30px"/>
+             
+            <h3 class="text-center" style="margin-top:40px;">{{ item.name }}</h3>
 
            <h5 class="text-center">ISBN : {{ item.isbn }}</h5>
       
            <h5 class="text-center">No of Pages : {{ item.numberOfPages }}</h5>
 
            <h5 class="text-center">Publishers : {{ item.publisher }}</h5>
-      
-          
-      </div>
+             <a ng-href='#' class="btn btn-default btn-custom" style="display:inline-block;">Know more</a>    
+       </div>

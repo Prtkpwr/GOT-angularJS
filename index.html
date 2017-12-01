@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html ng-app="GOT">
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/file.css">
+    </head>
+     <header style="background-image: url('images/banner1.jpg')">
+        
+      </header>
 <body ng-controller="mainController as mainCtrl">
+
+ 
    
     
-  <!--<div ng-repeat="data in mainCtrl.allData">
-      <ul><li> {{data.name}}</li></ul>
-      
-
-      </div><br/><br/>
-    <div ng-repeat="item in mainCtrl.allChar">
-        <ul><li>{{item.name}}</li></ul>
-      
-
-      
-      
-    
-    </div>-->
+    <a ng-click= "mainCtrl.booksShow()">BOOKS</a>
+    <a ng-click= "mainCtrl.charactersShow()">HOUSES</a>
+    <a ng-click= "mainCtrl.housesShow()">CHARACTERS</a>
     <div class="row">
-                  <div ng-repeat = "item in mainCtrl.allData">
+                  <div ng-repeat = "item in mainCtrl.allData | orderBy:'name'">
+                      <div ng-if="mainCtrl.book">
              
-                   <!-- <books-dir ng-if ="item.isbn"></books-dir> -->
+                    <books-dir ng-if ="item.isbn"></books-dir> 
+                      </div>
+                      <div ng-if="mainCtrl.character">
 
-                   <!-- <houses-dir ng-if ="item.region"></houses-dir>-->
+                    <houses-dir ng-if ="item.region"></houses-dir>
+                      </div>
+                      <div ng-if="mainCtrl.house">
 
                
 
                     <characters-dir ng-if ="item.gender"></characters-dir>
+                      </div>
               
                   </div>
     </div>

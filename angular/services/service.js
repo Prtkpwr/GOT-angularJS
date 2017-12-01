@@ -19,9 +19,9 @@ myApp.service("cService",function($http){
 		return $http.get(baseUrl2+char);
 	}
 
-	this.housesApi = function(){
+	this.housesApi = function(house){
 
-		return $http.get(baseUrl3);
+		return $http.get(baseUrl3+house);
 	}
 
 

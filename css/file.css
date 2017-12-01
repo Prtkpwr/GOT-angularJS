@@ -1,0 +1,36 @@
+.intro-image{
+		background-image: url("images/banner1.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		height: 200px;
+		opacity: 0.9;
+
+	}
+.houses{
+		
+		margin-top: 5%;
+		box-shadow: 1px 1px 5px grey; 
+		background: linear-gradient(to bottom,#7ff49e,#17ea4f);	
+		height: 18em;
+		color: #060606;
+		
+	}
+.books{
+		
+		margin-top: 5%;
+		box-shadow: 1px 1px 5px grey; 
+		background: linear-gradient(to bottom,#b8f2f1,#16bcb9);	
+		height: 18em;
+		color: #060606;
+		
+	}
+.characters{
+		
+		margin-top: 5%;
+		box-shadow: 1px 1px 5px grey; 
+		background: linear-gradient(to bottom,#eda89e,#e24631);	
+		height: 18em;
+		color: #060606;
+		
+	}

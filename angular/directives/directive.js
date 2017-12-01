@@ -19,3 +19,13 @@ myApp.directive("charactersDir",function(){
 		}
 
 	}});
+myApp.directive("housesDir",function(){
+
+		return{
+
+			restrict : "E" ,
+			templateUrl : "view/houses-template.html",
+			controller : function($scope){
+			
+		}
+	}})
