@@ -3,21 +3,31 @@
 <body ng-controller="mainController as mainCtrl">
    
     
-  <div ng-repeat="data in mainCtrl.allData">
-    {{data.name}}
+  <!--<div ng-repeat="data in mainCtrl.allData">
+      <ul><li> {{data.name}}</li></ul>
       
 
-      
-      
-    
-    </div>
+      </div><br/><br/>
     <div ng-repeat="item in mainCtrl.allChar">
-    {{item.name}}
+        <ul><li>{{item.name}}</li></ul>
       
 
       
       
     
+    </div>-->
+    <div class="row">
+                  <div ng-repeat = "item in mainCtrl.allData">
+             
+                   <!-- <books-dir ng-if ="item.isbn"></books-dir> -->
+
+                   <!-- <houses-dir ng-if ="item.region"></houses-dir>-->
+
+               
+
+                    <characters-dir ng-if ="item.gender"></characters-dir>
+              
+                  </div>
     </div>
 
 
@@ -28,7 +38,8 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
  <script type="text/javascript" src="angular/app.js"></script>
  <script type="text/javascript" src="angular/route.js"></script>
- <script type="text/javascript" src="angular/services/service.js"></script>
+ <script type="text/javascript" src="angular/directives/directive.js"></script>
+    <script type="text/javascript" src="angular/services/service.js"></script>
  <script type="text/javascript" src="angular/controller/mainController.js"></script>
 </body>
 </html>

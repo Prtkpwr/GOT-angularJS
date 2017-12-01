@@ -42,7 +42,7 @@ myApp.controller("mainController",["cService",function(cService){
             
             main.allCharacters=response.data;
              console.log(main.allCharacters);
-            main.allChar.push(main.allCharacters);
+            main.allData.push(main.allCharacters);
             
          
             
