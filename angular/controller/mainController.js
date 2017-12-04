@@ -68,7 +68,7 @@ myApp.controller("mainController",["cService",function(cService){
     
     this.houses= function (){
         
-        for(var i=1;i<=50;i++){
+        for(var i=1;i<=51;i++){
 
 		cService.housesApi(i)
 		.then(function successCallback(response){

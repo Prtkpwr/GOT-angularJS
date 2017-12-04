@@ -1,16 +1,18 @@
   
     <br/><br/><br/><br/>
-<div class="col-xs-12 col-md-3 text-center">
-    <a href="" ng-click= "mainCtrl.allShow()">ALL</a>
-    </div>
-<div class="col-xs-12 col-md-3 text-center">
-    <a href="" ng-click= "mainCtrl.booksShow()">BOOKS</a>
-    </div>
-<div class="col-xs-12 col-md-3 text-center">
-    <a href="" ng-click= "mainCtrl.charactersShow()">CHARACTERS</a>
-    </div>
-<div class="col-xs-12 col-md-3 text-center">
-    <a href="" ng-click= "mainCtrl.housesShow()">HOUSES</a>
+
+<div class="text-center">
+   
+    <button class="w3-button w3-black" ng-click= "mainCtrl.allShow()">ALL</button>
+ 
+
+    <button class="w3-button w3-black" ng-click= "mainCtrl.booksShow()">BOOKS</button>
+   
+
+    <button class="w3-button w3-black" ng-click= "mainCtrl.charactersShow()">CHARACTERS</button>
+    
+
+    <button class="w3-button w3-black" ng-click= "mainCtrl.housesShow()">HOUSES</button>
 </div>
 
 
@@ -19,18 +21,23 @@
 
 <br/>
 <!--TO DISPLAY ALL DATA-->
- <div class="container-fluid">
+ <div class="container">
 <div ng-if="mainCtrl.all">
-<div class="col-md-12">
-                      <div class="input-group filt-book" style="margin:10px 0px;">
+    <div class="row">
+<div class="col-md-8">
+                      <div class="input-group" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Name
                           <span class="fa fa-search" aria-hidden="true"></span>
                         </span>
                         <input type="text" name="book" class="form-control" placeholder="Name here.." ng-model="searchName.name">
                       </div>
                   </div>
+    <div class="col-md-4" style="margin:10px 0px;">
+        <button class="w3-button w3-black" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
+        </div>
+    </div>
 <div class="row">
-                  <div ng-repeat = "item in mainCtrl.allData | orderBy:'name' | filter:searchName">
+                  <div ng-repeat = "item in mainCtrl.allData | orderBy: mainCtrl.sortAllKey? '-name':'name' | filter:searchName">
                       
                      
              
@@ -46,9 +53,9 @@
 
 
     <!--TO DISPLAY ONLY CHARACTERS-->
- <div class="container-fluid">
+ <div class="container">
     <div ng-if="mainCtrl.character">
-    <div class="col-md-4">
+    <div class="col-md-3">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Name
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -56,7 +63,7 @@
                         <input type="text" name="book" class="form-control" placeholder="Character Name" ng-model="searchCharName.name">
                       </div>
                   </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Alias
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -64,7 +71,7 @@
                         <input type="text" name="book" class="form-control" placeholder="Character Alias" ng-model="searchCharalias.alias">
                       </div>
                   </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Gender
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -72,17 +79,20 @@
                         <input type="text" name="book" class="form-control" placeholder="Character Gender" ng-model="searchCharGender.gender">
                       </div>
                   </div>
+        <div class="col-md-3" style="margin:10px 0px;">
+        <button class="w3-button w3-black" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
+        </div>
     
-    <div ng-repeat = "item in mainCtrl.allCharArray | filter:searchCharName | filter:searchCharalias | filter:searchCharGender">
+    <div ng-repeat = "item in mainCtrl.allCharArray | filter:searchCharName | filter:searchCharalias | filter:searchCharGender | orderBy: mainCtrl.sortAllKey? '-name':'name'">
         <characters-dir></characters-dir>
     </div>
     </div>
 </div>
 
 <!--TO DISPLAY ALL BOOKS-->
- <div class="container-fluid">
+ <div class="container">
  <div ng-if="mainCtrl.book">
-    <div class="col-md-6">
+    <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Name
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -90,7 +100,7 @@
                         <input type="text" name="book" class="form-control" placeholder="Book Name" ng-model="searchBookName.name">
                       </div>
                   </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Publisher
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -98,17 +108,20 @@
                         <input type="text" name="book" class="form-control" placeholder="Book Publisher" ng-model="searchBookPub.publisher">
                       </div>
                   </div>
+     <div class="col-md-4" style="margin:10px 0px;">
+        <button class="w3-button w3-black" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
+        </div>
     
-    <div ng-repeat = "item in mainCtrl.allBookArray | filter:searchBookName | filter:searchBookPub">
+    <div ng-repeat = "item in mainCtrl.allBookArray | filter:searchBookName | filter:searchBookPub | orderBy: mainCtrl.sortAllKey? '-name':'name'">
         <books-dir></books-dir>
     </div>
     </div>
 </div>
 
 <!--TO DISPLAY ALL HOUSES-->
- <div class="container-fluid">
+ <div class="container">
  <div ng-if="mainCtrl.house">
-    <div class="col-md-6">
+    <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Name
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -116,7 +129,7 @@
                         <input type="text" name="book" class="form-control" placeholder="House Name" ng-model="searchHouseName.name">
                       </div>
                   </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
                         <span class="input-group-addon">Search by Region
                           <span class="fa fa-search" aria-hidden="true"></span>
@@ -124,8 +137,11 @@
                         <input type="text" name="book" class="form-control" placeholder="Region" ng-model="searchHouseRegion.region">
                       </div>
                   </div>
+     <div class="col-md-4" style="margin:10px 0px;">
+        <button class="w3-button w3-black" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
+        </div>
     
-    <div ng-repeat = "item in mainCtrl.allHouseArray | filter:searchHouseName | filter:searchHouseRegion">
+    <div ng-repeat = "item in mainCtrl.allHouseArray | filter:searchHouseName | filter:searchHouseRegion | orderBy: mainCtrl.sortAllKey? '-name':'name'">
         <houses-dir></houses-dir>
     </div>
     </div>
