@@ -2,7 +2,10 @@ myApp.controller("mainController",["cService",function(cService){
 
 	var main = this;
     this.allData=[];
-    this.allChar=[];
+    this.allCharArray=[];
+    this.allBookArray=[];
+    this.allHouseArray=[];
+    this.all=true;
     this.book=false;
     this.character=false;
     this.house=false;
@@ -18,6 +21,7 @@ myApp.controller("mainController",["cService",function(cService){
 		.then(function successCallback(response){
             
             main.allBooks=response.data;
+            main.allBookArray.push(main.allBooks);
              //console.log(main.allBooks);
            main.allData.push(main.allBooks);
            // console.log(main.allData);
@@ -40,12 +44,13 @@ myApp.controller("mainController",["cService",function(cService){
     
     this.characters= function (){
         
-            for(var i=1;i<=50;i++){
+            for(var i=1;i<=60;i++){
 		cService.charactersApi(i)
 		.then(function successCallback(response){
             
             main.allCharacters=response.data;
              //console.log(main.allCharacters);
+            main.allCharArray.push(main.allCharacters);
             main.allData.push(main.allCharacters);
             
          
@@ -63,12 +68,13 @@ myApp.controller("mainController",["cService",function(cService){
     
     this.houses= function (){
         
-        for(var i=1;i<=25;i++){
+        for(var i=1;i<=50;i++){
 
 		cService.housesApi(i)
 		.then(function successCallback(response){
             
             main.allHouses=response.data;
+            main.allHouseArray.push(main.allHouses);
              //console.log(main.allBooks);
            main.allData.push(main.allHouses);
             
@@ -88,22 +94,28 @@ myApp.controller("mainController",["cService",function(cService){
         }
 	}
 	this.houses();
+    this.allShow=function(){
+        main.all=true;
+        main.book= false;
+        main.character= false;
+        main.house=false;
+    }
     
     
     this.booksShow=function(){
-        
+        main.all=false;
         main.book= true;
         main.character= false;
         main.house=false;
     }
      this.charactersShow=function(){
-        
+        main.all=false;
         main.book= false;
         main.character= true;
         main.house=false;
     }
       this.housesShow=function(){
-        
+        main.all=false;
         main.book= false;
         main.character= false;
         main.house=true;

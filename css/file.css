@@ -1,36 +1,55 @@
 .intro-image{
-		background-image: url("images/banner1.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50%;
-		height: 200px;
-		opacity: 0.9;
+		 background-image:url(images/banner.jpg);
+
+   background-repeat:no-repeat;
+
+   background-size:cover;
+    
 
 	}
+
 .houses{
 		
-		margin-top: 5%;
-		box-shadow: 1px 1px 5px grey; 
-		background: linear-gradient(to bottom,#7ff49e,#17ea4f);	
-		height: 18em;
-		color: #060606;
+		 -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 2px solid;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #093301;
+    margin-top: 5%;
 		
 	}
 .books{
 		
-		margin-top: 5%;
-		box-shadow: 1px 1px 5px grey; 
-		background: linear-gradient(to bottom,#b8f2f1,#16bcb9);	
-		height: 18em;
-		color: #060606;
+		 -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 2px solid;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #34495e;
+    margin-top: 5%;
 		
 	}
 .characters{
 		
-		margin-top: 5%;
-		box-shadow: 1px 1px 5px grey; 
-		background: linear-gradient(to bottom,#eda89e,#e24631);	
-		height: 18em;
-		color: #060606;
+		 -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 2px solid;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #03484f;
+    margin-top: 5%;
 		
 	}
