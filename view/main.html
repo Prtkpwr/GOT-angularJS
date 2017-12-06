@@ -48,7 +48,7 @@
       <div class="col-md-4">
          <button class="mbutton" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
       </div>
-      <div ng-repeat = "item in mainCtrl.allCharArray | filter:searchCharName | filter:searchCharalias | filter:searchCharGender | orderBy: mainCtrl.sortAllKey? '-name':'name'">
+      <div ng-repeat = "item in mainCtrl.allCharArray | filter:searchCharName | filter:searchCharGender | orderBy: mainCtrl.sortAllKey? '-name':'name'">
          <characters-dir></characters-dir>
       </div>
    </div>
