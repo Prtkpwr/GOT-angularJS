@@ -3,7 +3,7 @@
 	 		<div class="container-fluid">
 				<div class="row" ng-repeat = "data in hCtrl.hData">
 					<div class="col-xs-12 text-center">
-						<div style="color: dimgrey;">
+						<div style="color: dimgrey;text-overflow: ellipsis">
 							<h4 style="margin: 10px 5px;" ng-if ='data.name != ""'><b>&spades; {{ data.name }} &spades; </b></h4>
                 			<h4>Region : {{ data.region || "Data Unavailable" }}</h4>
                 			<h4>Seats : {{ data.seats[0] || "Data Unavailable" }}</h4>
@@ -19,7 +19,7 @@
                 			</h4>
                				<p>Coat Of Arms : "{{ data.coatOfArms || "Data Unavailable" }}"</p>
                			</div>
-               			<div ng-if = 'data.swornMembers.length >= 1' style="color: dimgrey;">
+               			<div ng-if = 'data.swornMembers.length >= 1' style="color: dimgrey;text-overflow: ellipsis">
                 			<h3>Sworn Members</h3>
 							<hr style=" border-top: 1px solid black; margin-top: 5px;"><hr/>
 
