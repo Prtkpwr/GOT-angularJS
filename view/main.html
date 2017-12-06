@@ -31,28 +31,21 @@
 <!--TO DISPLAY ONLY CHARACTERS-->
 <div class="container-fluid">
    <div ng-if="mainCtrl.character">
-      <div class="col-md-3">
+      <div class="col-md-4">
          <div class="input-group filt-book" style="margin:10px 0px;">
             <span class="input-group-addon">Search by Name
             </span>
             <input type="text" name="book" class="form-control" placeholder="Character Name" ng-model="searchCharName.name">
          </div>
       </div>
-      <div class="col-md-3">
-         <div class="input-group filt-book" style="margin:10px 0px;">
-            <span class="input-group-addon">Search by Alias
-            </span>
-            <input type="text" name="book" class="form-control" placeholder="Character Alias" ng-model="searchCharalias.alias">
-         </div>
-      </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
          <div class="input-group filt-book" style="margin:10px 0px;">
             <span class="input-group-addon">Search by Gender
             </span>
             <input type="text" name="book" class="form-control" placeholder="Character Gender" ng-model="searchCharGender.gender">
          </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
          <button class="mbutton" type="button" ng-click="mainCtrl.sortAllKey =! mainCtrl.sortAllKey">Sort Alphabetically<span  ng-show="!mainCtrl.sortAllKey" style="margin-left: 5px;"></span><span ng-show="mainCtrl.sortAllKey" style="margin-left: 5px;"></span></button>
       </div>
       <div ng-repeat = "item in mainCtrl.allCharArray | filter:searchCharName | filter:searchCharalias | filter:searchCharGender | orderBy: mainCtrl.sortAllKey? '-name':'name'">
