@@ -21,8 +21,8 @@
 
 <br/>
 <!--TO DISPLAY ALL DATA-->
- <div class="container">
-<div ng-if="mainCtrl.all">
+ <div class="container-fluid" ng-if="mainCtrl.all">
+
     <div class="row">
 <div class="col-md-8">
                       <div class="input-group" style="margin:10px 0px;">
@@ -40,20 +40,20 @@
                   <div ng-repeat = "item in mainCtrl.allData | orderBy: mainCtrl.sortAllKey? '-name':'name' | filter:searchName">
                       
                      
-             
+              
                  <books-dir ng-if ="item.isbn"></books-dir> 
                  <houses-dir ng-if ="item.region"></houses-dir>
                  <characters-dir ng-if ="item.gender"></characters-dir>
                   
-              
+                    
                   </div>
     </div> 
-</div>
+
 </div>
 
 
     <!--TO DISPLAY ONLY CHARACTERS-->
- <div class="container">
+ <div class="container-fluid">
     <div ng-if="mainCtrl.character">
     <div class="col-md-3">
                       <div class="input-group filt-book" style="margin:10px 0px;">
@@ -90,7 +90,7 @@
 </div>
 
 <!--TO DISPLAY ALL BOOKS-->
- <div class="container">
+ <div class="container-fluid">
  <div ng-if="mainCtrl.book">
     <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
@@ -119,7 +119,7 @@
 </div>
 
 <!--TO DISPLAY ALL HOUSES-->
- <div class="container">
+ <div class="container-fluid">
  <div ng-if="mainCtrl.house">
     <div class="col-md-4">
                       <div class="input-group filt-book" style="margin:10px 0px;">
