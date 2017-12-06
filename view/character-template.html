@@ -5,5 +5,5 @@
 				     <h3> {{ item.name || "Name is kept Secret" }}</h3>
              <h5 >Alias :  " {{ item.aliases[0] || "Not Available"}} "</h5>
     <h5>Gender : {{ item.gender || "Not Available"}}</h5>
-             <a ng-href='#' class="btn btn-default btn-custom" style="display:inline-block;">Know more</a>    
+             <a ng-href='#/characters/{{ item.url.split("/").pop() }}' class="btn btn-default btn-custom" style="display:inline-block;">Know more</a>    
        </div>

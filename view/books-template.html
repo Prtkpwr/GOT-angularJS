@@ -10,5 +10,5 @@
            <h5 class="text-center">No of Pages : {{ item.numberOfPages }}</h5>
 
            <h5 class="text-center">Publishers : {{ item.publisher }}</h5>
-             <a ng-href='#' class="btn btn-default btn-custom" style="display:inline-block;">Know more</a>    
+             <a ng-href='#/books/{{ item.url.split("/").pop() }}' class="btn btn-default btn-custom" style="display:inline-block;">Know more</a>    
        </div>
