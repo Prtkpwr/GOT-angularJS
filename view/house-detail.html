@@ -1,25 +1,25 @@
 <br/><br/><br/><br/>
 
-	 		<div class="container-fluid">
+	 		<div class="container">
 				<div class="row" ng-repeat = "data in hCtrl.hData">
 					<div class="col-xs-12 text-center">
-						<div style="color: dimgrey;text-overflow: ellipsis">
-							<h4 style="margin: 10px 5px;" ng-if ='data.name != ""'><b>&spades; {{ data.name }} &spades; </b></h4>
+						<div style="color: dimgrey;">
+							<h4 style="margin: 10px 5px;" ng-if ='data.name != ""'><b> {{ data.name }}  </b></h4>
                 			<h4>Region : {{ data.region || "Data Unavailable" }}</h4>
                 			<h4>Seats : {{ data.seats[0] || "Data Unavailable" }}</h4>
                 			<h4>Titles : {{ houseCtrl.titles || "Data Unavailable" }}</h4>
                				<h4>Founded : {{ data.founded || "Data Unavailable" }}</h4>
                             <p> Words: {{ data.words || "Data Unavailable" }}</p>
                 
-                            <h4>Heir : <h6><a ng-href='#/characters/{{ data.heir.split("/").pop() }}' style="color: #6aa2d2;">{{ data.heir || "Data Unavailable" }}</a></h6>
+                            <h4>Heir : <h6><a ng-href='#/characters/{{ data.heir.split("/").pop() }}'>{{ data.heir || "Data Unavailable" }}</a></h6>
                 			</h4>
-               				<h4>Current Lord : <h6><a ng-href='#/characters/{{ data.currentLord.split("/").pop() }}' style="color: #6aa2d2;">{{ data.currentLord || "Data Unavailable" }}</a></h6>
+               				<h4>Current Lord : <h6><a ng-href='#/characters/{{ data.currentLord.split("/").pop() }}'>{{ data.currentLord || "Data Unavailable" }}</a></h6>
                				</h4>
-                            <h4>Overlord :<h6><a ng-href='#/houses/{{ data.overlord.split("/").pop() }}' style="color: #6aa2d2;">{{ data.overlord || "Data Unavailable" }}</a></h6>
+                            <h4>Overlord :<h6 class="h6"><a ng-href='#/houses/{{ data.overlord.split("/").pop() }}'>{{ data.overlord || "Data Unavailable" }}</a></h6>
                 			</h4>
                				<p>Coat Of Arms : "{{ data.coatOfArms || "Data Unavailable" }}"</p>
                			</div>
-               			<div ng-if = 'data.swornMembers.length >= 1' style="color: dimgrey;text-overflow: ellipsis">
+               			<div ng-if = 'data.swornMembers.length >= 1' style="color: dimgrey;">
                 			<h3>Sworn Members</h3>
 							<hr style=" border-top: 1px solid black; margin-top: 5px;"><hr/>
 
@@ -35,4 +35,3 @@
 
 				</div>	<!-- Row ends -->
              </div> <!-- Container Ends -->
- <!-- Jumbotron ends -->
