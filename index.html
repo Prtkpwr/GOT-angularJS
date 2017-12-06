@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" ng-app ="GOT">
-<head>
-	 
-	 <title>Game of Thrones </title>
-	 <meta charset="utf-8">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
-	 <link rel="stylesheet" href="css/bootstrap.min.css">
-                  
-	
-    				<!-- CUSTOM stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/file.css">
-  
-
-</head>
-<body ng-controller="mainController as mainCtrl" style="background-color: black">
-	
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-            
-     <div class="container">
-       <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand"><img src="images/logo.png"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-          </ul>
-        </div>
+   <head>
+      <title>Game of Thrones </title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <!-- CUSTOM stylesheet -->
+      <link rel="stylesheet" type="text/css" href="css/file.css">
+   </head>
+   <body ng-controller="mainController as mainCtrl" style="background-color: black">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand"><img src="images/logo.png"/></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a ng-href="#/">Home</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="container-fluid" style="text-overflow: ellipsis" ng-view>
       </div>
-    </nav> 
-    
-
- <div class="container-fluid" style="text-overflow: ellipsis" ng-view>
-     
-      </div>
-
-    <footer style="padding: 5px;background-color: #222222; color: ghostwhite; border-top:5px solid gray;margin-top: 30px;">
-            
-      <h3 class="text-center">&copy;Game of Thrones </h3> 
-    </footer>
-    
-
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            		 <!-- Latest compiled JavaScript -->
-
-   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  			           <!-- Angular FILES -->
-
-
-	
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
- <script type="text/javascript" src="angular/app.js"></script>
- <script type="text/javascript" src="angular/route.js"></script>
- <script type="text/javascript" src="angular/directives/directive.js"></script>
-    <script type="text/javascript" src="angular/services/service.js"></script>
- <script type="text/javascript" src="angular/controller/mainController.js"></script>
-    <script type="text/javascript" src="angular/controller/booksController.js"></script>
-    <script type="text/javascript" src="angular/controller/charController.js"></script>
-    <script type="text/javascript" src="angular/controller/houseController.js"></script>
+       <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+      <footer style="padding: 5px;background-color: #222222; color: ghostwhite; border-top:5px solid gray;margin-top: 30px;">
+         <h3 class="text-center">&copy;Game of Thrones </h3>
+      </footer>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Scroll to Top-->
+       <script>
+           // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
        
-</body>
+       </script>
+      
+      <!-- Angular FILES -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+      <script type="text/javascript" src="angular/app.js"></script>
+      <script type="text/javascript" src="angular/route.js"></script>
+      <script type="text/javascript" src="angular/directives/directive.js"></script>
+      <script type="text/javascript" src="angular/services/service.js"></script>
+      <script type="text/javascript" src="angular/controller/mainController.js"></script>
+      <script type="text/javascript" src="angular/controller/booksController.js"></script>
+      <script type="text/javascript" src="angular/controller/charController.js"></script>
+      <script type="text/javascript" src="angular/controller/houseController.js"></script>
+   </body>
 </html>

@@ -15,7 +15,7 @@ myApp.controller("mainController",["cService",function(cService){
 
 	this.books= function (){
         
-        for(var i=1;i<=12;i++){
+        for(var i=1;i<=12;i++){  // to get 12 books
 
 		cService.booksApi(i)
 		.then(function successCallback(response){
@@ -44,7 +44,7 @@ myApp.controller("mainController",["cService",function(cService){
     
     this.characters= function (){
         
-            for(var i=1;i<=60;i++){
+            for(var i=1;i<=60;i++){ //to get 60 characters
 		cService.charactersApi(i)
 		.then(function successCallback(response){
             
@@ -68,7 +68,7 @@ myApp.controller("mainController",["cService",function(cService){
     
     this.houses= function (){
         
-        for(var i=1;i<=51;i++){
+        for(var i=1;i<=51;i++){ //to get 51 houses
 
 		cService.housesApi(i)
 		.then(function successCallback(response){
@@ -93,8 +93,8 @@ myApp.controller("mainController",["cService",function(cService){
 		});
         }
 	}
-	this.houses();
-    this.allShow=function(){
+	this.houses();  
+    this.allShow=function(){ //to show all
         main.all=true;
         main.book= false;
         main.character= false;
@@ -102,19 +102,19 @@ myApp.controller("mainController",["cService",function(cService){
     }
     
     
-    this.booksShow=function(){
+    this.booksShow=function(){  //to show books
         main.all=false;
         main.book= true;
         main.character= false;
         main.house=false;
     }
-     this.charactersShow=function(){
+     this.charactersShow=function(){  //to show characters
         main.all=false;
         main.book= false;
         main.character= true;
         main.house=false;
     }
-      this.housesShow=function(){
+      this.housesShow=function(){  // to show houses
         main.all=false;
         main.book= false;
         main.character= false;
